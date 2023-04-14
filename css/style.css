@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    --ff-primary: 'Noto Serif', serif;
+    --ff-secondary: 'Roboto Mono', monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: black;
+    --clr-accent: #16e0bd;
+    --clr-grey: grey;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.2rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.3),
+        0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    box-shadow: var(--bs);
+}
+
+:focus {
+    outline: 3px solid var(--clr-dark);
+    outline-offset: 3px;
+}
+
+.logo-serene {
+    width: 15em;
+    align-items: start;
+}
+
+/* Topography */
+
+h1,
+h3 {
+    line-height: 1;
+    margin: 0 auto;
+}
+
+.section__title,
+.intro__sublogo-title {
+    margin-bottom: .25em;
+    background: var(--clr-grey);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-bold);
+}
+
+/* Intro */
+
+.intro__sublogo {
+    display: flex;
+}
+ @media (min-width: 600px) {
+    .section__title-intro {
+        align-self: start;
+        text-align: center;
+        grid-template-columns: min-content max-content;
+        margin-left: 1em;
+        margin-right: 1em;
+        
+    }
+    .intro__sublogo {
+        margin: 0 2em;
+        grid-template-columns: min-content max-content;
+    }
+
+    .sublogo-img {
+        grid-area: img;
+        min-width: 200px;
+        position: relative;
+        padding: 2px;
+    }
+    .intro__sublogo-title {
+        background: var(--clr-accent);
+        align-self: start;
+        text-align: center;
+        position: relative;
+        padding: 2px;
+        font-size: var(--fs-h3);
+        box-shadow: var(--bs);
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
